@@ -1,5 +1,5 @@
-import assign from 'assign-deep';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import {
   StatusBar,
   StyleSheet,
@@ -108,7 +108,7 @@ export default class AppIntro extends Component {
   constructor(props) {
     super(props);
 
-    this.styles = StyleSheet.create(assign({}, defaulStyles, props.customStyles));
+    this.styles = StyleSheet.create(Object.assign({}, defaulStyles, props.customStyles));
 
     this.state = {
       skipFadeOpacity: new Animated.Value(1),
